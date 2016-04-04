@@ -1,0 +1,64 @@
+name:           pacemaker
+version:        0.1
+cabal-version:  >=1.10
+build-type:     Simple
+author:         me
+
+library 
+  build-depends:
+                   base >= 4,
+                   scotty == 0.9.*,
+                   http-conduit == 2.1.0,                   
+                   http-types,
+                   conduit,
+                   text,
+                   hedis,
+                   transformers,
+                   aeson,
+                   wai, 
+                   wai-extra,
+                   bytestring,
+                   time,
+                   unordered-containers,
+                   http-types,
+                   async,
+                   HTTP,
+                   containers                   
+  hs-source-dirs:  src
+  ghc-options:     -Wall -rtsopts
+  default-language: Haskell2010  
+  exposed-modules:
+          WebServer
+          Pacemaker
+          KeyConfig
+          EventGenerator 
+          Metrics 
+          HistoricalData
+          WebHookNotifier
+          Feedback
+
+
+executable pacemaker
+  main-is: Main.hs
+  build-depends: 
+        base
+      , pacemaker
+      , hedis
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts
+  hs-source-dirs: exec
+
+
+test-suite spec
+  type:             exitcode-stdio-1.0
+  ghc-options:      -Wall
+  hs-source-dirs:   test
+  default-language: Haskell2010  
+  main-is:          Spec.hs
+  build-depends:
+        base  >= 4
+      , hspec
+      , pacemaker
+      , aeson
+      , QuickCheck
+      , text

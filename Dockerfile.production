@@ -1,0 +1,13 @@
+FROM haskell:7.8
+
+RUN apt-get update
+
+RUN apt-get install -y tmux make
+RUN apt-get install -y curl python
+
+
+ADD pacemaker /pacemaker
+
+EXPOSE 7223
+
+CMD /pacemaker

@@ -1,0 +1,8 @@
+{
+  "api_keys": { "12" : "myentity" },
+  "__webhook_config" : {
+    "myentity" : {
+      "alert_endpoint" : "http://requestb.in/zjzypzzk"      
+    }
+  }
+}  

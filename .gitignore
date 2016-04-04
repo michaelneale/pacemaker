@@ -1,0 +1,6 @@
+.cabal-sandbox
+cabal.sandbox.config
+dist
+pinger
+dump.rdb
+pacemaker
