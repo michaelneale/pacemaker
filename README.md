@@ -1,5 +1,7 @@
 # Pacemaker
 
+[![Git](https://app.soluble.cloud/api/v1/public/badges/16b55af1-e213-4871-aa46-a1a0fee500a7.svg?orgId=451115019187)](https://app.soluble.cloud/repos/details/github.com/michaelneale/pacemaker?orgId=451115019187)  
+
 Pacemaker is an alerting engine. It accepts "heartbeats" which are a regular stream of (json) events from a system indicating their health. Should the heartbeat go missing, become irregular, or the data submitted appear irregular, then alerts will result. It does this by learning from timeseries data discovered and also adapting to the frequency of the heartbeat. 
 
 The end result is a history of a "check" over time - when it was ok, when it was critical, and the actual and predicted values of a timeseries. 
